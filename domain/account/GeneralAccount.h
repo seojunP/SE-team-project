@@ -4,12 +4,11 @@
 #include "Account.h"
 
 class GeneralAccount : public Account {
-public:
-  GeneralAccount(int id, const std::string& password, const std::string& name, const std::string& residentId);
-  std::string getResidentId() const;
-
 private:
-  std::string residentId;
+    std::string residentId;
+public:
+    GeneralAccount(std::string id, const std::string& password, const std::string& name, const std::string& residentId);
+    std::string getResidentId() const;
 };
 
 #endif // GENERALACCOUNT_H
