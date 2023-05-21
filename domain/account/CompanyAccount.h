@@ -9,7 +9,6 @@ private:
 public:
     CompanyAccount(std::string id, const std::string& password, const std::string& name, const std::string& businessNumber);
     std::string getBusinessNumber() const;
-
 };
 
 #endif // COMPANYACCOUNT_H
