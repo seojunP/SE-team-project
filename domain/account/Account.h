@@ -2,21 +2,18 @@
 #define ACCOUNT_H
 
 #include <string>
-#include "AccountType.h"
 
 class Account {
-public:
-  Account(int id, const std::string& password, const std::string& name);
-  int getId() const;
-  std::string getPassword() const;
-  std::string getName() const;
-  AccountType getAccountType() const;
-
 private:
-  int id;
-  std::string password;
-  std::string name;
-  AccountType accountType;
+    std::string id;
+    std::string password;
+    std::string name;
+public:
+    Account(std::string id, const std::string& password, const std::string& name);
+    std::string getId() const;
+    std::string getPassword() const;
+    std::string getName() const;
+
 };
 
 #endif // ACCOUNT_H

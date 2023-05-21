@@ -1,22 +1,17 @@
-#ifndef ACCOUNT_H
-#define ACCOUNT_H
+#include "Account.h"
 
-#include <string>
-#include "AccountType.h"
+Account::Account(std::string id, const std::string& password, const std::string& name)
+    : id(id), password(password), name(name) {
+}
 
-class Account {
-private:
-    int id;
-    std::string password;
-    std::string name;
-    AccountType accountType;
-public:
-    Account(int id, const std::string& password, const std::string& name);
-    int getId() const;
-    std::string getPassword() const;
-    std::string getName() const;
-    AccountType getAccountType() const;
+std::string Account::getId() const {
+    return id;
+}
 
-};
+std::string Account::getPassword() const {
+    return password;
+}
 
-#endif // ACCOUNT_H
+std::string Account::getName() const {
+    return name;
+}

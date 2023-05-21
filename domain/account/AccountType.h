@@ -2,7 +2,7 @@
 #define ACCOUNTTYPE_H
 
 enum class AccountType {
-  RegularMember,
+  GeneralMember,
   CompanyMember
 };
 
