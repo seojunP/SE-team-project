@@ -3,8 +3,8 @@
 #include <CompanyAccount.h>
 #include <GeneralAccount.h>
 
-AddAccountUI::AddAccountUI(AccountCollection* AccountCollection)
-    : addAccountControl(AccountCollection) {}
+AddAccountUI::AddAccountUI(AccountCollection* accountCollection)
+    : addAccountControl(accountCollection) {}
 
 bool AddAccountUI::requestRegister(std::string input) {
     StringParser parser(input);
