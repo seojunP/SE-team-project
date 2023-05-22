@@ -8,7 +8,7 @@
 class SessionCollection
 {
 private:
-    std::map<std::string, Session> sessionList;
+    std::map<std::string, Session*> sessionList;
 
     // singleton instance
     static SessionCollection* instance;
@@ -20,7 +20,7 @@ public:
     static SessionCollection* getInstance();
     bool createSession(std::string id);
     bool removeSession(std::string id);
-    Session getSession(std::string id);
+    Session* getSession(std::string id);
 };
 
 #endif
