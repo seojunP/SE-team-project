@@ -3,8 +3,8 @@
 #include <CompanyAccount.h>
 #include <GeneralAccount.h>
 
-AddAccountUI::AddAccountUI(AccountCollection* AccountCollection)
-    : addAccountControl(AccountCollection) {}
+AddAccountUI::AddAccountUI(AccountCollection* accountCollection)
+    : addAccountControl(accountCollection) {}
 
 bool AddAccountUI::requestRegister(std::string input) {
     StringParser parser(input);
@@ -23,5 +23,5 @@ bool AddAccountUI::requestRegister(std::string input) {
         account = new GeneralAccount(id, password, name, residentId);
     }
 
-    addAccountControl.registerAccount(account);
+    return addAccountControl.registerAccount(account);
 }
