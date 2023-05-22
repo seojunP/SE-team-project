@@ -23,5 +23,5 @@ bool AddAccountUI::requestRegister(std::string input) {
         account = new GeneralAccount(id, password, name, residentId);
     }
 
-    addAccountControl.registerAccount(account);
+    return addAccountControl.registerAccount(account);
 }
