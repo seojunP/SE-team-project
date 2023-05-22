@@ -1,5 +1,12 @@
 #include <AccountCollection.h>
 
+AccountCollection* AccountCollection::getInstance() {
+    if (instance == nullptr) {
+        instance = new AccountCollection();
+    }
+
+    return instance;
+}
 bool AccountCollection::createAccount(Account account) {
     if (accountList.find(account.getId()) == accountList.end()) {
         accountList.insert({account.getId(), account});
