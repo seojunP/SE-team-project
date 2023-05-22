@@ -3,13 +3,13 @@
 
 #include <AccountCollection.h>
 
-class AddACcountControl
+class AddAccountControl
 {
 private:
     AccountCollection* accountCollection;
 
 public:
-    AddACcountControl(AccountCollection* accountCollection) {
+    AddAccountControl(AccountCollection* accountCollection) {
         this->accountCollection = accountCollection;
     }
 
