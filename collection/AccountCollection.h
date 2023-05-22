@@ -8,7 +8,7 @@
 class AccountCollection
 {
 private:
-    std::map<std::string, Account> accountList;
+    std::map<std::string, Account*> accountList;
 
     // singleton instance
     static AccountCollection* instance;
@@ -18,9 +18,10 @@ private:
 
 public:
     static AccountCollection* getInstance();
-    bool createAccount(Account account);
+    bool createAccount(Account* account);
     bool removeAccount(std::string id);
     bool validaateAccount(std::string id, std::string password);
+    Account* getAccount(std::string id);
 };
 
 #endif
